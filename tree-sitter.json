@@ -14,7 +14,7 @@
     {
       "name": "ssv",
       "camelcase": "Ssv",
-      "title": "Rainbow CSV (semicolon)",
+      "title": "Rainbow SSV (semicolon)",
       "scope": "source.csv",
       "file-types": ["csv"],
       "class-name": "TreeSitterSvs",
