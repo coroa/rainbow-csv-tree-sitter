@@ -5,7 +5,6 @@ Test with comma
 ,7 columns,"Music",Dance,999,0,Simon & Garfunkel
 3,8 columns,"Music",Dub,500,,Chat & Fob,0
 
-
 ---
 
 (csv
@@ -28,5 +27,4 @@ Test with comma
         (fourth)
         (fifth)
         (seventh)
-        (first))        (fifth)
- )
+        (first)))
