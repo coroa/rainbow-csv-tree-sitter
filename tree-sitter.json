@@ -2,26 +2,48 @@
   "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
   "grammars": [
     {
-      "name": "rainbow-csv-tree-sitter",
-      "camelcase": "RainbowCsvTreeSitter",
-      "title": "Rainbow CSV TreeSitter for Zed",
+      "name": "csv",
+      "camelcase": "Csv",
+      "title": "Rainbow CSV",
       "scope": "source.csv",
-      "file-types": [
-        "csv"
-      ],
+      "file-types": ["csv"],
       "injection-regex": "^csv$",
-      "class-name": "TreeSitterCsv"
+      "class-name": "TreeSitterCsv",
+      "path": "csv"
+    },
+    {
+      "name": "ssv",
+      "camelcase": "Ssv",
+      "title": "Rainbow SSV (semicolon)",
+      "scope": "source.csv",
+      "file-types": ["csv"],
+      "class-name": "TreeSitterSvs",
+      "path": "ssv"
+    },
+    {
+      "name": "psv",
+      "camelcase": "Psv",
+      "title": "Rainbow CSV (pipes)",
+      "scope": "source.psv",
+      "file-types": ["psv"],
+      "class-name": "TreeSitterPsv",
+      "path": "psv"
+    },
+    {
+      "name": "tsv",
+      "camelcase": "Tsv",
+      "title": "Rainbow CSV (tabs)",
+      "scope": "source.tsv",
+      "file-types": ["psv"],
+      "class-name": "TreeSitterTsv",
+      "path": "tsv"
     }
   ],
   "metadata": {
     "version": "0.1.0",
-    "license": "ISC",
-    "description": "Csv grammar for tree-sitter",
-    "authors": [
-      {
-        "name": "Hans"
-      }
-    ],
+    "license": "MIT",
+    "description": "Rainbow Csv grammar for tree-sitter in zed",
+    "authors": [{ "name": "Hans" }, { "name": "coroa" }],
     "links": {
       "repository": "https://github.com/coroa/rainbow-csv-tree-sitter"
     }
@@ -31,7 +53,7 @@
     "go": false,
     "node": false,
     "python": false,
-    "rust": true,
+    "rust": false,
     "swift": false,
     "zig": false
   }
