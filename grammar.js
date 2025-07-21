@@ -1,17 +1,42 @@
-/**
- * @file Csv grammar for tree-sitter
- * @author Hans
- * @license ISC
- */
-
-/// <reference types="tree-sitter-cli/dsl" />
-// @ts-check
-
+let sep = ",";
 module.exports = grammar({
   name: "csv",
 
   rules: {
-    // TODO: add the actual grammar rules
-    source_file: $ => "hello"
-  }
+    csv: ($) => repeat($.row),
+    row: ($) => seq(repeat(seq($._cycle7, sep)), $._remainder),
+
+    _cycle7: ($) =>
+      seq(
+        optional(alias($.field, $.first)),
+        sep,
+        optional(alias($.field, $.second)),
+        sep,
+        optional(alias($.field, $.third)),
+        sep,
+        optional(alias($.field, $.fourth)),
+        sep,
+        optional(alias($.field, $.fifth)),
+        sep,
+        optional(alias($.field, $.sixth)),
+        sep,
+        optional(alias($.field, $.seventh)),
+      ),
+
+    _remainder: ($) =>
+      seq(
+        optional(alias($.field, $.first)),
+        ...[$.seventh, $.sixth, $.fifth, $.fourth, $.third, $.second].reduce(
+          (accum, fld) => [optional(seq(sep, optional(alias($.field, fld)), ...accum))],
+          [],
+        ),
+        "\n",
+      ),
+
+    field: ($) =>
+      choice(
+        new RegExp(`[^${sep}\\n\\r\"]+`),
+        seq('"', repeat(choice(/[^"]/, '""')), '"'),
+      ),
+  },
 });
