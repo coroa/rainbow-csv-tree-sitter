@@ -1,3 +1,3 @@
 const defineGrammar = require("../common/define-grammar");
 
-module.exports = defineGrammar("csv", ",");
+module.exports = defineGrammar("ssv", ";");

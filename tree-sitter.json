@@ -10,6 +10,33 @@
       "injection-regex": "^csv$",
       "class-name": "TreeSitterCsv",
       "path": "csv"
+    },
+    {
+      "name": "ssv",
+      "camelcase": "Ssv",
+      "title": "Rainbow CSV (semicolon)",
+      "scope": "source.csv",
+      "file-types": ["csv"],
+      "class-name": "TreeSitterSvs",
+      "path": "ssv"
+    },
+    {
+      "name": "psv",
+      "camelcase": "Psv",
+      "title": "Rainbow CSV (pipes)",
+      "scope": "source.psv",
+      "file-types": ["psv"],
+      "class-name": "TreeSitterPsv",
+      "path": "psv"
+    },
+    {
+      "name": "tsv",
+      "camelcase": "Tsv",
+      "title": "Rainbow CSV (tabs)",
+      "scope": "source.tsv",
+      "file-types": ["psv"],
+      "class-name": "TreeSitterTsv",
+      "path": "tsv"
     }
   ],
   "metadata": {
