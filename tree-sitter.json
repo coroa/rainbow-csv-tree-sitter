@@ -1,0 +1,38 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "rainbow-csv-tree-sitter",
+      "camelcase": "RainbowCsvTreeSitter",
+      "title": "Rainbow CSV TreeSitter for Zed",
+      "scope": "source.csv",
+      "file-types": [
+        "csv"
+      ],
+      "injection-regex": "^csv$",
+      "class-name": "TreeSitterCsv"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "ISC",
+    "description": "Csv grammar for tree-sitter",
+    "authors": [
+      {
+        "name": "Hans"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/coroa/rainbow-csv-tree-sitter"
+    }
+  },
+  "bindings": {
+    "c": false,
+    "go": false,
+    "node": false,
+    "python": false,
+    "rust": true,
+    "swift": false,
+    "zig": false
+  }
+}
