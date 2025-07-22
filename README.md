@@ -27,8 +27,6 @@ brew install just  # macOS
 # or see https://github.com/casey/just for other methods
 ```
 
-## Building
-
 ### Quick Start
 
 ```bash

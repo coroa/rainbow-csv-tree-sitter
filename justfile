@@ -62,13 +62,6 @@ update-tsv:
 # Clean generated files
 clean:
     rm -rf csv/src ssv/src psv/src tsv/src
-    rm -rf csv/binding.gyp ssv/binding.gyp psv/binding.gyp tsv/binding.gyp
-    rm -rf csv/Cargo.toml ssv/Cargo.toml psv/Cargo.toml tsv/Cargo.toml
-    rm -rf target
-
-# Build Rust bindings
-build:
-    cargo build
 
 # Run a specific test file
 test-file grammar file:
@@ -76,6 +69,3 @@ test-file grammar file:
 
 # Generate and test all grammars
 all: generate test
-
-# Generate, build, and test everything
-ci: generate build test
