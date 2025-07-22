@@ -53,7 +53,7 @@
     "go": false,
     "node": false,
     "python": false,
-    "rust": true,
+    "rust": false,
     "swift": false,
     "zig": false
   }
