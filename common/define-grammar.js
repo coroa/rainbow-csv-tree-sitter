@@ -3,6 +3,7 @@ let esc = (sep) => sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 module.exports = function defineGrammar(dialect, sep) {
   return grammar({
     name: dialect,
+    extras: ($) => [], // handle whitespace explicitly
 
     rules: {
       csv: ($) => repeat($.row),
