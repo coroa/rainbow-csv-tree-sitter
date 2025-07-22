@@ -34,8 +34,8 @@ module.exports = function defineGrammar(dialect, sep) {
             ],
             [],
           ),
-          "\n",
           optional("\r"), // windows line-endings
+          "\n",
         ),
 
       field: ($) =>
